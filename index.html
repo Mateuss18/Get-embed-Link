@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 
-    <title>Get embed link</title>
+  <title>Get embed link</title>
 </head>
-<body style="background-color: darkblue;">
 
-    <input id="youTubeLink" placeholder="Insert link here" type="text">
-    <button onclick="getEmbedLink()" type="submit">GET LINK</button>
+<body>
+  <div class="container">
+    <h1>Convert a YouYube video link to embed</h1>
 
-    <div id="result"></div>
+    <form class="row insert-data">
+      <input required id="youTubeLink" placeholder="Insert link here" type="text">
+      <button onclick="getEmbedLink(event)" type="submit">Convert</button>
+    </form>
 
-    <iframe src="" frameborder="0" id="iframeTest"></iframe>
+    <div class="bottom-container">
+      <span class="failure-message">This is not a valid link please try again.</span>
+  
+      <div class="results">
+        <h2>Video embed:</h2>
+        <div class="row">
+          <div id="result-link"></div>
+          <div class="group">
+            <button onclick="copyLink()" class="copy">Copy</button>
+            <span class="copied-message">copied to clipboard</span>
+          </div>
+        </div>
+        <h2>Preview:</h2>
+        <iframe src="" frameborder="0" id="iframe-preview"></iframe>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>By: <a href="https://mateuslopes.netlify.app/" target="_blank" rel="noopener noreferrer"><span class="red">&lt;</span>Mateus<span class="red">/&gt;</span></a></div>
+  </footer>
+  <div class="overlay"></div>
 </body>
 
 <script src="./script.js"></script>
+
 </html>
