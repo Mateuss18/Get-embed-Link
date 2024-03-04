@@ -135,3 +135,11 @@ footer a:hover {
   transition: 200ms;
   transform: scale(1.04);
 }
+@media (max-height: 755px) {
+  .bottom-container {
+    height: 465px;
+  }
+  iframe {
+    min-height: 305px
+  }
+}
